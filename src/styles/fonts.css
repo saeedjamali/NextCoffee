@@ -1,0 +1,33 @@
+@font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/iranyekan/Iranyekan.ttf")
+}
+
+
+@font-face {
+    font-family: iranyekanMedium;
+    font-style: normal;
+    font-weight: bold;
+    src: url("/fonts/iranyekan/IranyekanMedium.ttf")
+}
+
+@font-face {
+    font-family: iranyekanBold;
+    font-style: normal;
+    font-weight: bolder;
+    src: url("/fonts/iranyekan/IranyekanBold.ttf")
+}
+
+  
+  @font-face {
+    font-family: shabnam;
+    src: url("/fonts/shabnam/Shabnam-Medium.woff");
+  }
+  
+  
+  @font-face {
+    font-family: shabnamBold;
+    src: url("/fonts/shabnam/Shabnam-Bold.woff");
+  }
