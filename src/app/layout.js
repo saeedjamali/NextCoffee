@@ -3,9 +3,9 @@ import "./globals.css";
 import AOSInit from "@/utils/aos";
 import Footer from "@/components/modules/Footer/Footer";
 import ScrollToTop from "@/utils/ScrollToTop";
-import SignIn from "@/components/templates/SignIn";
+import SignIn from "@/components/templates/SignIn/SignIn";
 import NextCoffeeProvider from "@/components/context/NextCoffeeProvider";
-
+import toast, { Toaster } from 'react-hot-toast';
 
 
 export const metadata = {
@@ -16,15 +16,13 @@ export const metadata = {
 
 export default function RootLayout(props) {
   const { children } = props;
-  props.params.isShow = "Hamediiii"
-  console.log("Props in RootLayout", JSON.stringify(props.params));
-
   return (
-
     <html lang="fa" dir="rtl">
-      <body >
-        <div className='w-full relative flex flex-col items-center'>
-          <NextCoffeeProvider>
+      <Toaster />
+      <NextCoffeeProvider>
+
+        <body >
+          <div className='w-full relative flex flex-col items-center'>
             <Navbar />
             <div className="mt-28">
               <AOSInit />
@@ -33,9 +31,9 @@ export default function RootLayout(props) {
             {/* <ScrollToTop /> */}
             {/* <SignIn /> */}
             <Footer />
-          </NextCoffeeProvider>
-        </div>
-      </body>
+          </div>
+        </body>
+      </NextCoffeeProvider>
     </html>
 
 

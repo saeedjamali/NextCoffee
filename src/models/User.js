@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 
-const schema = mongoose.schema({
+const schema =new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -25,4 +25,11 @@ const schema = mongoose.schema({
     refreshToken: {
         type: String
     }
-})
+},
+    {
+        timestamps: true,
+    })
+
+
+const model = mongoose.models?.User || mongoose.model('User', schema);
+export default model

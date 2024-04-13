@@ -4,3 +4,10 @@ export const authTypes = {
   SMS: "sms",
   FORGOTPASS: "forget-password"
 };
+
+export const rules = {
+  USER: "USER",
+  ADMIN: "ADMIN",
+
+};
+
