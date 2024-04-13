@@ -1,13 +1,27 @@
-import "./globals.css";
+"use client"
 
+import Navbar from "@/components/modules/Navbar/Navbar";
+import "./globals.css";
+import dataSlider from "../data/slider-data.json";
+import SwiperModule from "@/components/modules/Swiper/SwiperModule";
+import Latest from "@/components/templates/Latest/Latest";
+import Articles from "@/components/templates/Articles/Articles";
+import SignIn from "@/components/templates/SignIn";
+import { useState } from "react";
+import NextCoffeeProvider, { useAppProvider } from "../components/context/NextCoffeeProvider";
 
 
 export default function Home() {
+  const { isShowSignInForm, setIsShowSignInForm } = useAppProvider();
   return (
     <>
-      <h1 className="font-iranyekanMedium text-purple-600 bg-blue-300">بنام خداوند جان و خرد</h1>
 
-      <h1>بنام خداوند حان و خرد</h1>
+      <SwiperModule data={dataSlider} />
+      <Latest />
+      <Articles data={dataSlider} />
+      {isShowSignInForm && <SignIn />}
+
     </>
+
   );
 }
